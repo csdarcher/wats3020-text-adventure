@@ -3,17 +3,12 @@ let playerName = "";
 let choiceList = [];
 let currentPage = null;
 
-///////////////////////////////////////////////////
-//////// TODOs ///////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// Fill in the blanks below to complete each TODO task.                       //
-////////////////////////////////////////////////////////////////////////////////
 
-// TODO: Prompt the user for their name. Store the name in the variable `playerName`.
+// Prompt the user for their name. Store the name in the variable `playerName`.
 
 playerName = prompt("Hey you! Yes you. What's your name?");
 
-// TODO: Create a function called `getCurrentPage()`. It should accept one
+// Create a function called `getCurrentPage()`. It should accept one
 // parameter, which is the `slug` for the current page. This function will fetch
 // the current page and return a page object using the `slug` value for a key.
 
@@ -22,26 +17,26 @@ function getCurrentPage(slug){
   return currentPage;
 }
 
-// TODO: Create a function called `recordChoice()` that will accept a `slug`
+// Create a function called `recordChoice()` that will accept a `slug`
 // parameter and add it to the `choiceList` Array (probably using `push()`).
 
 function recordChoice(slug){
-  choiceList.push(slug);
-  console.log("Added to ${slug} to choiceList Array");
+  choiceList.push(slug); // Adds choice to the 'choiceList' array.
+  console.log("Added ${slug} to choiceList Array");
 }
 
-// TODO: Create a function called `undoChoice()` that will remove the last
+// Create a function called `undoChoice()` that will remove the last
 // `slug` in the `choiceList` Array and then will return the last `slug` in the
 // `choiceList` Array.
 
 function undoChoice(){
-  choiceList.pop();// Remove the last item in the 'choiceList' array. 
+  choiceList.pop(); // Remove the last item in the 'choiceList' array. 
   console.log("Returning to previous page.");
-  return choiceList[choiceList.length-1];
+  return choiceList[choiceList.length-1]; // Returns the previous choice.
 }
 
 
-// TODO: Create a function called `changePage()` that accepts a parameter called
+// Create a function called `changePage()` that accepts a parameter called
 // `slug` and which handles "turning the page" in three steps:
 //  1. It should call the `recordChoice()` function (and give it the `slug` as
 //     a parameter.
